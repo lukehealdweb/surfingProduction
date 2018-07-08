@@ -1,0 +1,731 @@
+body{
+    margin: 0;
+}
+/* Hamburger button styles. */
+.hamburger-button {
+    
+	position: absolute;
+	transition: .3s ease-in-out;
+	width: 35px;
+	height: 34px;
+	display: block;
+	top: 7rem;
+	right: 7rem;
+	z-index: 100000;
+}
+
+	.hamburger-button span {
+		position: absolute;
+		height: 4px;
+		border-radius: 20px;
+		width: 100%;
+		background-color: #fff;
+		top: 0;
+		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+	}
+
+		.hamburger-button span:nth-child(1) {
+			top: 0px;
+		}
+
+		.hamburger-button span:nth-child(2),
+		.hamburger-button span:nth-child(3) {
+			top: 13px;
+		}
+
+		.hamburger-button span:nth-child(4) {
+			top: 26px;
+		}
+
+	    .hamburger-button.active span {
+		background-color: #FFF;
+	}
+
+		.hamburger-button.active span:nth-child(1),
+		.hamburger-button.active span:nth-child(4) {
+			opacity: 0;
+		}
+
+		.hamburger-button.active span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		.hamburger-button.active span:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+
+/* 1. Style the overlay & navigation. */
+.overlay {
+	position: fixed;
+	background: #3f9dd5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s, visibility .3s, height .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    z-index: 10000;
+}
+
+nav {
+	font-size: 2rem;
+	font-family: 'Gloria Hallelujah', cursive;
+	text-align: center;
+}
+
+	nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+		nav ul li {
+			opacity: 0;
+			margin: 1rem 0;
+		}
+
+			nav ul li a {
+				color: #FFF;
+				text-decoration: none;
+				transition: opacity .2s ease;
+				opacity: .75;
+			}
+
+				nav ul li a:hover {
+					opacity: 1;
+				}
+
+/* 2. Add the animation. */
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-25%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/* 3. Style the visible overlay. */
+.overlay.visible {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}
+
+	.overlay.visible li {
+		animation: fadeInLeft .3s ease forwards;
+	}
+
+		.overlay.visible li:nth-of-type(1) {
+			animation-delay: 0.23s;
+		}
+
+		.overlay.visible li:nth-of-type(2) {
+			animation-delay: 0.26s;
+		}
+
+		.overlay.visible li:nth-of-type(3) {
+			animation-delay: 0.29s;
+		}
+
+		.overlay.visible li:nth-of-type(4) {
+			animation-delay: 0.32s;
+		}
+
+		.overlay.visible li:nth-of-type(5) {
+			animation-delay: 0.35s;
+		}
+
+a{
+    cursor: pointer;
+}
+
+.grid{
+    overflow: hidden;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "section1 section1"
+        "section2 section2"
+        "section3 section4"
+        "section5 section6"
+        "section7 section7"
+        "section8 section8"
+        "section9 section9"
+        "section10 section11"
+        "section12 section13"
+        "section14 section15"
+        "section16 section16";
+}
+.section1{
+    grid-area: section1;
+    height: 3em;
+    width: 100%;
+    background-color: #3f9dd5;
+    margin-bottom: 1px;
+}
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
+#logoTop{
+    position: absolute;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-top: 1.2em;
+    font-size: 12px;
+    margin-left: 2em;
+}
+#contactInfo{
+    display: inline-flex;
+    padding-right: 20px;
+    color: white;
+    margin-top: 1.5em;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contactInfo{
+    display: block;
+    height: 3em;
+    width: 100%;
+    text-align: center;
+}
+#icons{
+    color: white;
+    padding: 10px;
+}
+.section2{
+    grid-area: section2;
+    background-color: #3f9dd5 ;
+}
+#logo{
+    height: 15em;
+}
+.logo{
+    position: absolute;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+}
+.item img{
+    width: 100%;
+}
+.overlayFilter{
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 1600px;
+  opacity: 0.2;
+}
+.heading{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+#learn{
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 6em;
+}
+.owl-dots{
+    display: none;
+}
+.section3{
+    grid-area: section3;
+    height: 35em;
+    background-color: white;
+}
+.stock1{
+    height: 100%;
+    width: 100%;
+}
+#stock1{
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+}
+.section4{
+    grid-area: section4;
+    height: 35em;
+    background-color: white;
+}
+.section5{
+    grid-area: section5;
+    height: 35em;
+    background-color: #3f9dd5;
+}
+.section6{
+    grid-area: section6;
+    height: 35em;
+    background-color: #3f9dd5;
+}
+#whiteHut2{
+    padding-top: 1em;
+    color: grey;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1em;
+    opacity: 1;
+}
+#whiteHutText2{
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+    margin: 2em;
+    opacity: 1;
+}
+#blue{
+    color: #6bc5ef;
+}
+#yellow{
+    color: #f9eb71;
+}
+ul.a {
+    list-style-type: circle;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section7{
+    grid-area: section7;
+    height: 30em;
+    background-color: red;
+    background-image: url(/images/birthdayParty.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#whiteHut{
+    padding-top: 1em;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1em;
+    opacity: 1;
+}
+#whiteHutText{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: 2em;
+    opacity: 1;
+}
+.nestedGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "n1 n2";
+}
+.n1{
+    grid-area: n1;
+    height: 30em;
+    background-color: #1d737c;
+    opacity: 0.8;
+}
+.n2{
+    grid-area: n2;
+    height: 30em;
+    background-color: #1d737c;
+    opacity: 0.8;
+}
+.nestedGrid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "n1 n2";
+}
+.n1two{
+    grid-area: n1;
+    height: 40em;
+    background-color: #3f9dd5;
+    opacity: 0.8;
+}
+.n2two{
+    grid-area: n2;
+    height: 40em;
+    background-color: #3f9dd5;
+    opacity: 0.8;
+}
+.nestedGrid3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "n1 n2";
+}
+.n1three{
+    grid-area: n1;
+    height: 35em;
+    background-color: #1d737c;
+    opacity: 0.8;
+}
+.n2three{
+    grid-area: n2;
+    height: 35em;
+    background-color: #1d737c;
+    opacity: 0.8;
+}
+.section8{
+    grid-area: section8;
+    height: 40em;
+    background-color: red;
+    background-image: url(/images/groupLessons.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.section9{
+    grid-area: section9;
+    height: 35em;
+    background-color: red;
+    background-image: url(/images/group.JPG);
+    background-position: center;
+    background-size: cover;
+}
+.section10{
+    grid-area: section10;
+    height: 35em;
+    background-color: white;
+}
+.section11{
+    grid-area: section11;
+    height: 35em;
+    background-color: white;
+}
+.section12{
+    grid-area: section12;
+    height: 30em;
+    background-color: #1d737c;
+}
+.section13{
+    grid-area: section13;
+    height: 30em;
+    background-color: #1d737c;
+}
+.section14{
+    grid-area: section14;
+    height: 30em;
+    background-color: red;
+    background: linear-gradient(rgba(63, 157, 213, 0.80), rgba(63, 157, 213, 0.80)), url(../images/contactUs.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.section15{
+    grid-area: section15;
+    height: 30em;
+    background-color: #3f9dd5;
+}
+.section16{
+    grid-area: section16;
+    height: 3em;
+    background-color: white;
+}
+  #map {
+        height: 100%;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+@media only screen and (max-width: 720px) {
+   .grid{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "section1 section1"
+        "section2 section2"
+        "section3 section3"
+        "section4 section4"
+        "section5 section5"
+        "section6 section6"
+        "section7 section7"
+        "section8 section8"
+        "section9 section9"
+        "section10 section10"
+        "section11 section11"
+        "section12 section12"
+        "section13 section13"
+        "section14 section14"
+        "section15 section15"
+        "section16 section16";
+}
+    .section1{
+        height: 5em;
+    }
+    .section3{
+        height: auto;  
+    }
+    .section4{
+        height: auto;  
+    }
+    .section5{
+        height: auto;  
+    }
+    .section6{
+        height: auto;  
+    }
+    .section7{
+        height: auto;  
+    }
+    .section8{
+        height: auto;  
+    }
+    .section9{
+        height: auto;  
+    }
+    .section10{
+        height: auto;  
+    }
+    .section11{
+        height: auto;  
+    }
+    ul.a {
+    list-style-type: circle;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    list-style-position: inside;
+}
+
+    .nestedGrid{
+    grid-gap: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "n1 n1"
+        "n2 n2";
+}
+    .nestedGrid2{
+    grid-gap: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "n1 n1"
+        "n2 n2";
+}
+    .nestedGrid3{
+    grid-gap: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "n1 n1"
+        "n2 n2";
+}
+    .section4{
+        text-align: center;
+    }
+    .n1{
+        display: none;
+    }
+    .n2{
+        height: auto;
+        opacity: 0.9;
+    }
+    .n1two{
+        display: none;
+    }
+    .n2two{
+        height: auto;
+        opacity: 0.9;
+    }
+    .n1three{
+        display: none;
+    }
+    .n2three{
+        height: auto;
+        opacity: 0.9;
+    }
+    #whiteHut{
+    padding-top: 1em;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1em;
+    opacity: 1;
+    text-align: center;
+}
+#whiteHutText{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: 2em;
+    opacity: 1;
+    text-align: center;
+}
+#logo{
+    display: none;
+}
+#logoTop{
+    display: none;
+}
+#contactInfo{
+    display: none;
+}
+.contactInfo{
+    display: none;
+}
+#icons{
+    display: none;
+}
+    /* Hamburger button styles. */
+.hamburger-button {
+	position: absolute;
+	transition: .3s ease-in-out;
+	width: 35px;
+	height: 34px;
+	display: block;
+	left: 50%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+	z-index: 100000;
+}
+
+	.hamburger-button span {
+		position: absolute;
+		height: 4px;
+		border-radius: 20px;
+		width: 100%;
+		background-color: #fff;
+		top: 0;
+		transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+	}
+
+		.hamburger-button span:nth-child(1) {
+			top: 0px;
+		}
+
+		.hamburger-button span:nth-child(2),
+		.hamburger-button span:nth-child(3) {
+			top: 13px;
+		}
+
+		.hamburger-button span:nth-child(4) {
+			top: 26px;
+		}
+
+	    .hamburger-button.active span {
+		background-color: #FFF;
+	}
+
+		.hamburger-button.active span:nth-child(1),
+		.hamburger-button.active span:nth-child(4) {
+			opacity: 0;
+		}
+
+		.hamburger-button.active span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+
+		.hamburger-button.active span:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+
+/* 1. Style the overlay & navigation. */
+.overlay {
+	position: fixed;
+	background: #3f9dd5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s, visibility .3s, height .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    z-index: 10000;
+}
+
+nav {
+	font-size: 2rem;
+	font-family: 'Gloria Hallelujah', cursive;
+	text-align: center;
+}
+
+	nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+		nav ul li {
+			opacity: 0;
+			margin: 1rem 0;
+		}
+
+			nav ul li a {
+				color: #FFF;
+				text-decoration: none;
+				transition: opacity .2s ease;
+				opacity: .75;
+			}
+
+				nav ul li a:hover {
+					opacity: 1;
+				}
+
+/* 2. Add the animation. */
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-25%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+/* 3. Style the visible overlay. */
+.overlay.visible {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}
+
+	.overlay.visible li {
+		animation: fadeInLeft .3s ease forwards;
+	}
+
+		.overlay.visible li:nth-of-type(1) {
+			animation-delay: 0.23s;
+		}
+
+		.overlay.visible li:nth-of-type(2) {
+			animation-delay: 0.26s;
+		}
+
+		.overlay.visible li:nth-of-type(3) {
+			animation-delay: 0.29s;
+		}
+
+		.overlay.visible li:nth-of-type(4) {
+			animation-delay: 0.32s;
+		}
+
+		.overlay.visible li:nth-of-type(5) {
+			animation-delay: 0.35s;
+		}
+
+a{
+    cursor: pointer;
+}
+}
+@media only screen and (max-width: 830px) {
+    #logoTop{
+        display: none;
+    }

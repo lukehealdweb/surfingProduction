@@ -305,7 +305,7 @@ ul.a {
     grid-area: section7;
     height: 30em;
     background-color: red;
-    background-image: url(/images/birthdayParty.jpg);
+    background-image: url(../images/birthdayParty.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -383,7 +383,7 @@ ul.a {
     grid-area: section8;
     height: 40em;
     background-color: red;
-    background-image: url(/images/groupLessons.jpg);
+    background-image: url(../images/groupLessons.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -391,7 +391,7 @@ ul.a {
     grid-area: section9;
     height: 35em;
     background-color: red;
-    background-image: url(/images/group.JPG);
+    background-image: url(../images/group.JPG);
     background-position: center;
     background-size: cover;
 }

@@ -238,8 +238,32 @@ a{
     font-family: 'Luckiest Guy', cursive;
     color: white;
     text-align: center;
-    font-size: 4em;
+    font-size: 3.5em;
     margin-top: 6em;
+}
+#smaller{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 0.4em;
+}
+#evensmaller{
+    font-size: 0.7em;
+}
+.button {
+    background-color: #ef8a7c;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.button1 {border-radius: 100px;
+          font-family: 'Open Sans', sans-serif;
 }
 .owl-dots{
     display: none;
@@ -310,7 +334,7 @@ ul.a {
     background-size: cover;
 }
 #whiteHut{
-    padding-top: 1em;
+    padding-top: 2em;
     color: white;
     font-family: 'Luckiest Guy', cursive;
     margin: 1em;
@@ -322,12 +346,33 @@ ul.a {
     margin: 2em;
     opacity: 1;
 }
+#whiteHut3{
+    padding-top: 1em;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1em;
+    opacity: 1;
+    text-align: center;
+}
+#whiteHutText3{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: 2em;
+    opacity: 1;
+    text-align: center;
+}
 .nestedGrid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
         "n1 n2";
+}
+#footer{
+     font-family: 'Luckiest Guy', cursive;
+    color: black;
+    text-align: center;
+    font-size: 1em;
 }
 .n1{
     grid-area: n1;
@@ -407,12 +452,12 @@ ul.a {
 }
 .section12{
     grid-area: section12;
-    height: 30em;
+    height: 35em;
     background-color: #1d737c;
 }
 .section13{
     grid-area: section13;
-    height: 30em;
+    height: 35em;
     background-color: #1d737c;
 }
 .section14{
@@ -497,6 +542,21 @@ ul.a {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     list-style-position: inside;
+}
+    #whiteHut2{
+    padding-top: 1em;
+    color: grey;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1em;
+    opacity: 1;
+        text-align-last: center;
+}
+#whiteHutText2{
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+    margin: 2em;
+    opacity: 1;
+    text-align-last: center;
 }
 
     .nestedGrid{
